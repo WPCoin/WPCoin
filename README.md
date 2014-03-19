@@ -3,72 +3,45 @@ WPCoin integration/staging tree
 
 http://www.whitepalacecoin.com
 
-Copyright (c) 2009-2013 Bitcoin Developers
-Copyright (c) 2011-2013 WPCoin Developers
+Copyright (c) 2009-2014 Bitcoin Developers
+Copyright (c) 2014-2014 WPCoin Developers
 
 What is WPCoin?
 ----------------
 
-WPCoin is a lite version of Bitcoin using scrypt as a proof-of-work algorithm.
- - 2.5 minute block targets
- - subsidy halves in 840k blocks (~4 years)
- - ~84 million total coins
+Web site: http://www.whitepalacecoin.com
+Forum: http://www.whitepalacecoin.com/forum
 
-The rest is the same as Bitcoin.
- - 50 coins per block
- - 2016 blocks to retarget difficulty
+Launch Date: Wed, 19 Mar 2014 16:00:00 GMT
 
-For more information, as well as an immediately useable, binary version of
-the WPCoin client sofware, see http://www.whitepalacecoin.com.
+ALGORITHM: SCRYPT
+MAX COINS: 320,000,000
+BLOCK TIME: 1 minute
+DIFFICULTY RETARGET: Dynamic
+CONFIRM: 1 MINUTES
+MATURES:360BLOCKS
+NO PREMINE
+P2P port: 25556, RPC port: 25555
 
-License
--------
+Block 0 - 21,600: 60 WPCoin reward 
+Block 21,601 - 43,200: 40 WPCoin reward 
+Block 43,201 - 86,400: 20 WPCoin reward 
+Block 86,401 +: 20 WPCoin reward 
 
-WPCoin is released under the terms of the MIT license. See `COPYING` for more
-information or see http://opensource.org/licenses/MIT.
 
-Development process
--------------------
 
-Developers work in their own trees, then submit pull requests when they think
-their feature or bug fix is ready.
+[url=https://www.dropbox.com/s/ampujfc0u564dgk/WPCoin-qt.zip]Windows 32-bit v0.9.1.0[/url]
 
-If it is a simple/trivial/non-controversial change, then one of the WPCoin
-development team members simply pulls it.
+[url=https://www.dropbox.com/s/ghmeaw7rfmpkbnh/WPCoin-linux-32bit.zip]Linux 32-bit v0.9.1.0[/url]
 
-If it is a *more complicated or potentially controversial* change, then the patch
-submitter will be asked to start a discussion (if they haven't already) on the
-[mailing list](http://sourceforge.net/mailarchive/forum.php?forum_name=bitcoin-development).
+[url=https://www.dropbox.com/s/bz2fo4foy2aoiao/WPCoin-linux-64bit.zip]Linux 64-bit v0.9.1.0[/url]
 
-The patch will be accepted if there is broad consensus that it is a good thing.
-Developers should expect to rework and resubmit patches if the code doesn't
-match the project's coding conventions (see `doc/coding.txt`) or are
-controversial.
 
-The `master` branch is regularly built and tested, but is not guaranteed to be
-completely stable. [Tags](https://github.com/bitcoin/bitcoin/tags) are created
-regularly to indicate new official, stable release versions of WPCoin.
+WPCoin.conf 
 
-Testing
--------
-
-Testing and code review is the bottleneck for development; we get more pull
-requests than we can review and test. Please be patient and help out, and
-remember this is a security-critical project where any mistake might cost people
-lots of money.
-
-### Automated Testing
-
-Developers are strongly encouraged to write unit tests for new code, and to
-submit new unit tests for old code.
-
-Unit tests for the core code are in `src/test/`. To compile and run them:
-
-    cd src; make -f makefile.unix test
-
-Unit tests for the GUI code are in `src/qt/test/`. To compile and run them:
-
-    qmake BITCOIN_QT_TEST=1 -o Makefile.test bitcoin-qt.pro
-    make -f Makefile.test
-    ./WPCoin-qt_test
-
+rpcuser=1
+rpcpassword=1
+rpcport=25555
+maxconnections=100
+server=1
+rpcallowip=*
